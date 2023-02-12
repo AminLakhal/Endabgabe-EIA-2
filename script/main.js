@@ -143,27 +143,28 @@ var Endabgabe_EIA2;
         await fetch("https://webuser.hs-furtwangen.de/~lakhalam/Database/index.php?" + query.toString());
         console.log("deleted");
     }
+    // Slider haben mit JSON.stringify nicht mehr die Position geändert
     function setValues(_name, _radius, _particles, _lifespan, _size, _color, _index) {
         console.log("set values for " + _name);
         //Größe der Explosion 
         Endabgabe_EIA2.radiusMultiplier = _radius;
-        Endabgabe_EIA2.outputRadius.innerHTML = JSON.stringify(_radius); // Display the default slider value
+        Endabgabe_EIA2.outputRadius.innerHTML = _radius; // Display the default slider value
         // Update the current slider value (each time you drag the slider handle)
-        Endabgabe_EIA2.sliderRadius.value = JSON.stringify(_radius);
+        Endabgabe_EIA2.sliderRadius.value = _radius;
         // Anzahl der Partikel -> Main click Funktion
-        Endabgabe_EIA2.outputParticle.innerHTML = JSON.stringify(_particles); // Display the default slider value
+        Endabgabe_EIA2.outputParticle.innerHTML = _particles; // Display the default slider value
         Endabgabe_EIA2.particleAmount = _particles;
         // Update the current slider value (each time you drag the slider handle)
-        Endabgabe_EIA2.sliderParticle.value = JSON.stringify(_particles);
+        Endabgabe_EIA2.sliderParticle.value = _particles;
         // Lebensdauer der Partikel 
-        Endabgabe_EIA2.outputLifespan.innerHTML = JSON.stringify(_lifespan / 100); // Display the default slider value
+        Endabgabe_EIA2.outputLifespan.innerHTML = _lifespan / 100; // Display the default slider value
         console.log();
         Endabgabe_EIA2.lifespanNumber = _lifespan / 100;
-        Endabgabe_EIA2.sliderLifespan.value = JSON.stringify(_lifespan / 100);
+        Endabgabe_EIA2.sliderLifespan.value = _lifespan / 100;
         // Größe der Partikel 
-        Endabgabe_EIA2.particleSizeValue.innerHTML = JSON.stringify(_size); // Display the default slider value
+        Endabgabe_EIA2.particleSizeValue.innerHTML = _size; // Display the default slider value
         Endabgabe_EIA2.particleSize = _size;
-        Endabgabe_EIA2.particleSizeSlider.value = JSON.stringify(_size);
+        Endabgabe_EIA2.particleSizeSlider.value = _size;
         // Farbwerte 
         let colorValue = document.getElementById("colorpicker");
         let colorValueName = document.getElementById("colorValue");

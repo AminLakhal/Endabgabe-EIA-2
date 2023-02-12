@@ -186,33 +186,33 @@ namespace Endabgabe_EIA2 {
         console.log("deleted");
     }
 
-
+// Slider haben mit JSON.stringify nicht mehr die Position geändert
     function setValues(_name: string, _radius: number, _particles: number, _lifespan: number, _size: number, _color: string, _index: string) {
         console.log("set values for " + _name);
 
         //Größe der Explosion 
         radiusMultiplier = _radius;
-        outputRadius.innerHTML = JSON.stringify(_radius); // Display the default slider value
+        outputRadius.innerHTML = _radius; // Display the default slider value
         // Update the current slider value (each time you drag the slider handle)
-        sliderRadius.value = JSON.stringify(_radius);
+        sliderRadius.value = _radius;
 
         // Anzahl der Partikel -> Main click Funktion
-        outputParticle.innerHTML = JSON.stringify(_particles); // Display the default slider value
+        outputParticle.innerHTML = _particles; // Display the default slider value
         particleAmount = _particles;
         // Update the current slider value (each time you drag the slider handle)
-        sliderParticle.value = JSON.stringify(_particles);
+        sliderParticle.value = _particles;
 
 
         // Lebensdauer der Partikel 
-        outputLifespan.innerHTML = JSON.stringify(_lifespan / 100); // Display the default slider value
+        outputLifespan.innerHTML = _lifespan / 100; // Display the default slider value
         console.log()
         lifespanNumber = _lifespan / 100;
-        sliderLifespan.value = JSON.stringify(_lifespan / 100);
+        sliderLifespan.value = _lifespan / 100;
 
         // Größe der Partikel 
-        particleSizeValue.innerHTML = JSON.stringify(_size); // Display the default slider value
+        particleSizeValue.innerHTML = _size; // Display the default slider value
         particleSize = _size;
-        particleSizeSlider.value = JSON.stringify(_size);
+        particleSizeSlider.value = _size;
 
         // Farbwerte 
         let colorValue = <HTMLInputElement>document.getElementById("colorpicker");
