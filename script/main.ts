@@ -108,7 +108,7 @@ namespace Endabgabe_EIA2 {
         else {
             //Soll Seite neu laden da es sonst zu Problemen mit der Server Kommunikation kommen kann, wenn gleich ein neuer Eintrag
             //gespeichert wird
-            window.open("../index.html", "_self");
+            window.open("./index.html", "_self");
             let formData: FormData = new FormData(document.forms[0]);
             let json: FormDataJSON = {};
             //Umwandlung FormData in Json FormData
