@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": "../../EIA-II"
+		},
+		{
+			"path": ".."
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "Endabgabe-EIA-2"
+    }
+}
